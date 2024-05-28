@@ -54,16 +54,22 @@ export const Header = () => {
         </ul>
         <ThemeSwitch />
         <button className="btn btn-ghost border border-black dark:border-white">
-          <h2 className="text-[16px] font-bold text-black dark:text-white">
+          <a
+            download={"/ulaaka cv.pdf"}
+            className="text-[16px] font-bold text-black dark:text-white"
+          >
             Downlaod CV
-          </h2>
+          </a>
         </button>
       </div>
       <div className="flex md:hidden p-[6px] items-center gap-2">
         <button className="flex md:hidden btn btn-ghost border border-black dark:border-white dark:text-white min-h-6 h-full">
-          <h2 className="text-[12px] font-bold text-black dark:text-white">
+          <a
+            download={"/ulaaka cv.pdf"}
+            className="text-[12px] font-bold text-black dark:text-white"
+          >
             Downlaod CV
-          </h2>
+          </a>
         </button>
         <div onClick={toggle}>
           <Bars />
