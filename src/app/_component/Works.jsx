@@ -104,7 +104,8 @@ export const Works = () => {
                 </p>
                 <p className="text-xl text-gray font-medium text-black dark:text-white">
                   Typescript, ReactJS, NextJS, Vercel, NodeJS, MongoDB,
-                  Nodemailer, JWT, Graphql, Jest, Cypress, Nx-monorepo
+                  Nodemailer, JWT, Graphql, Jest, Cypress, Nx-monorepo,
+                  TailwindCSS
                 </p>
               </div>
             </div>
