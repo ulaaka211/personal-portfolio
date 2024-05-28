@@ -2,32 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@keyframes bounce {
+  to {
+    translate: 0 5px;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.pedro {
+  scale: 1.1;
+  animation: bounce 200ms linear infinite alternate;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@keyframes spin {
+  to {
+    rotate: -1turn;
+  }
+}
+
+.wrapper {
+  animation: spin 10s linear infinite;
+}
+
+.avatar {
+  animation: shape 8s linear infinite;
+}
+
+@keyframes shape {
+  from {
+    border-radius: 33% 67% 55% 45% / 58% 60% 40% 42%;
+  }
+  25% {
+    border-radius: 32% 50% 50% / 30% 40% 60% 70%;
+  }
+
+  50% {
+    border-radius: 61% 39% 58% 42% / 37% 66% 34% 63%;
+  }
+
+  75% {
+    border-radius: 42% 55% 45% / 58% 60% 40% 42%;
+  }
+  to {
+    border-radius: 33% 67% 55% 45% / 58% 60% 40% 42%;
   }
 }
