@@ -55,7 +55,8 @@ export const Header = () => {
         <ThemeSwitch />
         <button className="btn btn-ghost border border-black dark:border-white">
           <a
-            download={"/ulaaka cv.pdf"}
+            download
+            href="/ulaaka cv.pdf"
             className="text-[16px] font-bold text-black dark:text-white"
           >
             Downlaod CV
@@ -65,7 +66,8 @@ export const Header = () => {
       <div className="flex md:hidden p-[6px] items-center gap-2">
         <button className="flex md:hidden btn btn-ghost border border-black dark:border-white dark:text-white min-h-6 h-full">
           <a
-            download={"/ulaaka cv.pdf"}
+            download
+            href="/ulaaka cv.pdf"
             className="text-[12px] font-bold text-black dark:text-white"
           >
             Downlaod CV
