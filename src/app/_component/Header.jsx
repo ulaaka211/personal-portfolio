@@ -20,8 +20,8 @@ export const Header = () => {
     <header
       className={
         scrolled
-          ? "h-full w-full flex items-center justify-between py-4 md:px-10 px-2 bg-[#ffffffd9] dark:bg-[#090a0bd9] sticky top-0 left-0 z-10 shadow-md"
-          : "h-full w-full flex items-center justify-between py-4 md:px-10 px-2 bg-white dark:bg-[#090a0b] relative top-0 left-0 z-10"
+          ? "h-full w-full flex items-center justify-between py-2 md:px-10 px-2 bg-[#ffffffd9] dark:bg-[#090a0bd9] sticky top-0 left-0 z-10 shadow-md"
+          : "h-full w-full flex items-center justify-between py-2 md:px-10 px-2 bg-white dark:bg-[#090a0b] relative top-0 left-0 z-10"
       }
     >
       <div

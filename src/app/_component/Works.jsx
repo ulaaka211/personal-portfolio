@@ -9,7 +9,7 @@ export const Works = () => {
       className="w-full m-auto flex items-center bg-[#F9F9F9] dark:bg-[#090a0b] md:py-24 py-10"
     >
       <div className="flex md:w-[55%] w-full m-auto">
-        <div className="flex flex-col gap-10">
+        <div className="flex flex-col gap-8">
           <h3 className="text-main text-xl font-bold mb-3 m-auto text-black dark:text-white">
             RECENT WORKS
           </h3>
