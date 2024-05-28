@@ -8,7 +8,7 @@ export const Introduction = () => {
   return (
     <div
       id="Home"
-      className="w-full md:h-[100vh] h-[70vh] px-6 flex flex-col justify-center items-center md:gap-20 gap-6 m-auto bg-[#F9F9F9] dark:bg-[#090a0b] md:pb-[200px]"
+      className="w-full md:h-[100vh] py-10 px-6 flex flex-col justify-center items-center md:gap-20 gap-6 m-auto bg-[#F9F9F9] dark:bg-[#090a0b] md:pb-[200px]"
     >
       <div className="flex md:flex-row flex-col-reverse gap-10 items-center justify-center">
         <div className="flex md:flex-col flex-col md:gap-8 gap-4 md:items-start items-center text-black dark:text-white">
