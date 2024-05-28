@@ -13,7 +13,7 @@ export const Introduction = () => {
       <div className="flex md:flex-row flex-col-reverse gap-10 items-center justify-center">
         <div className="flex md:flex-col flex-col md:gap-8 gap-4 md:items-start items-center text-black dark:text-white">
           <h1 className="text-5xl font-bold md:text-left text-center">
-            FullStack Developer 👋
+            Full-Stack Developer 👋
           </h1>
           <p className="text-1xl text-black dark:text-white md:text-left text-center">
             Hello, I'm Saikhanbayar, a passionate full stack developer <br />

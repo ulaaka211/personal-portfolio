@@ -7,7 +7,6 @@ import { useFormik } from "formik";
 import { Pedro } from "../_component/Pedro";
 import { GithubIcon } from "../assets/GithubIcon";
 import { InstaIcon } from "../assets/InstaIcon";
-import { LinkedInIcon } from "../assets/LinkedInIcon";
 import { useRef } from "react";
 import emailjs, { send } from "emailjs-com";
 import { toast } from "react-toastify";
@@ -29,23 +28,24 @@ export const Contact = () => {
     },
     validationSchema: validationSchema,
     onSubmit: async (values) => {
-      //   try {
-      //     emailjs.send(
-      //       "service_xjk9bw8",
-      //       "template_clzg0to",
-      //       {
-      //         name: values.name,
-      //         to_email: values.email,
-      //         message: values.message,
-      //       },
-      //       "nHPoh9lvgX_GC03kU"
-      //     );
-      //     console.log(send);
-      //     toast.success("amjilttai");
-      //   } catch (error) {
-      //     console.log(error);
-      //     toast.error("buruu baina");
-      //   }
+      try {
+        // emailjs.send(
+        //   "service_xjk9bw8",
+        //   "template_clzg0to",
+        //   {
+        //     name: values.name,
+        //     to_email: values.email,
+        //     message: values.message,
+        //   },
+        //   "nHPoh9lvgX_GC03kU"
+        // );
+
+        console.log("test");
+        toast.success("Амжилттай илгээгдлээ");
+      } catch (error) {
+        console.log(error);
+        toast.error("Алдаа гарлаа");
+      }
     },
   });
 

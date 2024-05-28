@@ -14,7 +14,7 @@ export const AboutMe = () => {
           </h3>
 
           <h2 className="md:text-4xl text-2xl md:font-bold font-semibold md:text-left text-center text-black dark:text-white">
-            A dedicated FullStack Developer
+            A dedicated Full-Stack Developer
           </h2>
 
           <p className=" text-gray-500 md:text-left text-center">
