@@ -64,21 +64,21 @@ export const Introduction = () => {
           </div>
         </div>
         <div className="flex md:hidden flex-col gap-6 items-center">
-          <div className="flex md:gap-14 gap-4">
+          <div className="flex md:gap-14 gap-6">
             <Planguage source="/icon-html.png" />
             <Planguage source="/icon-css.png" />
             <Planguage source="/icon-javascript.png" />
             <Planguage source="/icon-typescript.svg" />
             <Planguage source="/icon-react.svg" />
           </div>
-          <div className="flex md:gap-14 gap-4">
+          <div className="flex md:gap-14 gap-6">
             <Planguage source="/icon-mongodb.svg" />
             <Planguage source="/icon-graphql.png" />
             <Planguage source="/icon-tailwindcss.svg" />
             <Planguage source="/icon-materialui.png" />
             <Planguage source={"/icon-cypress.svg"} />
           </div>
-          <div className="flex md:gap-14 gap-4">
+          <div className="flex md:gap-14 gap-6">
             <Planguage source="/icon-nextjs.svg" />
             <Planguage source="/icon-nodejs.svg" />
             <Planguage source={"/icon-express.svg"} />
