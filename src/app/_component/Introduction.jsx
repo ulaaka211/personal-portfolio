@@ -10,7 +10,7 @@ export const Introduction = () => {
       id="Home"
       className="w-full md:h-[100vh] h-[70vh] px-6 flex flex-col justify-center items-center md:gap-20 gap-6 m-auto bg-[#F9F9F9] dark:bg-[#090a0b] md:pb-[200px]"
     >
-      <div className="flex md:flex-row flex-col-reverse gap-10 items-center justify-between">
+      <div className="flex md:flex-row flex-col-reverse gap-10 items-center justify-center">
         <div className="flex md:flex-col flex-col md:gap-8 gap-4 md:items-start items-center text-black dark:text-white">
           <h1 className="text-5xl font-bold md:text-left text-center">
             FullStack Developer 👋
@@ -26,12 +26,12 @@ export const Introduction = () => {
         </div>
 
         <div
-          className="avatar md:w-[30%] w-[75%] border-[3px] border-black dark:border-white"
+          className="avatar md:w-[20%] w-[75%] border-[3px] border-black dark:border-white"
           style={{
             overflow: "hidden",
           }}
         >
-          <img src={"/catler.png"} alt="profilePicture" />
+          <img src={"/me.png"} alt="profilePicture" />
         </div>
       </div>
       <div className="flex md:flex-row flex-col md:gap-20 gap-5 items-center md:mr-12">
