@@ -31,7 +31,7 @@ export const TextInput = (props) => {
         )}
       >
         <input
-          className="py-1 md:py-[13px] w-full text-black bg-[#ECEDF0] rounded-sm focus:outline-none md:text-base text-sm"
+          className="py-[13px] w-full text-black bg-[#ECEDF0] rounded-sm focus:outline-none md:text-base text-sm"
           type={type}
           name={name}
           onChange={onChange}

@@ -31,7 +31,7 @@ export const TextArea = (props) => {
         )}
       >
         <textarea
-          className="md:min-h-[200px] min-h-[100px] py-1 md:py-[13px] w-full text-black bg-[#ECEDF0] rounded-sm focus:outline-none md:text-base text-sm"
+          className="md:min-h-[200px] min-h-[100px] py-[13px] w-full text-black bg-[#ECEDF0] rounded-sm focus:outline-none md:text-base text-sm"
           type={type}
           name={name}
           onChange={onChange}
