@@ -15,7 +15,7 @@ export const TextArea = (props) => {
 
   return (
     <div className="flex flex-col gap-1 w-full" data-testid="Custom-Input">
-      <h1 className="md:text-lg text-base font-medium md:font-semibold">
+      <h1 className="md:text-lg text-base font-medium md:font-semibold text-black">
         {label}
       </h1>
       <label
