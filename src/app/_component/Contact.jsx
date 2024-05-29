@@ -24,7 +24,7 @@ export const Contact = () => {
       message: "",
     },
     validationSchema: validationSchema,
-    onSubmit: async (values) => {
+    onSubmit: async (values, { resetForm }) => {
       try {
         emailjs.send(
           "service_xjk9bw8",
@@ -36,7 +36,7 @@ export const Contact = () => {
           },
           "nHPoh9lvgX_GC03kU"
         );
-
+        formik.handleReset();
         toast.success("Амжилттай илгээгдлээ");
       } catch (error) {
         toast.error("Алдаа гарлаа");
