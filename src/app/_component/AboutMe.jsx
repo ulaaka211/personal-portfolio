@@ -5,7 +5,7 @@ export const AboutMe = () => {
       className="w-full md:h-[70vh] py-10 flex bg-white dark:bg-[#121212]"
     >
       <div className="flex md:flex-row flex-col items-center md:gap-20 gap-8 md:w-[55%] w-full m-auto px-4">
-        <div className="md:w-[50%] w-[75%] h-[50%] overflow-hidden rounded-xl">
+        <div className="md:w-[50%] w-[85%] h-[50%] overflow-hidden rounded-xl">
           <img src="/coding.png" alt="coding" />
         </div>
         <div className="md:w-[50%] w-[80%] flex flex-col gap-3">
