@@ -18,7 +18,6 @@
     "react-dom": "^18",
     "react-tilt": "^1.0.2",
     "react-toastify": "^10.0.5",
-    "yarn": "^1.22.22",
     "yup": "^1.4.0"
   },
   "devDependencies": {

@@ -15,7 +15,9 @@ export const TextInput = (props) => {
 
   return (
     <div className="flex flex-col gap-1 w-full" data-testid="Custom-Input">
-      <h1 className="text-lg font-semibold">{label}</h1>
+      <h1 className="md:text-lg text-base font-medium md:font-semibold">
+        {label}
+      </h1>
       <label
         data-testid="error"
         className={cx(
@@ -29,7 +31,7 @@ export const TextInput = (props) => {
         )}
       >
         <input
-          className="py-[13px] w-full text-black bg-[#ECEDF0] rounded-sm focus:outline-none"
+          className="py-1 md:py-[13px] w-full text-black bg-[#ECEDF0] rounded-sm focus:outline-none md:text-base text-sm"
           type={type}
           name={name}
           onChange={onChange}

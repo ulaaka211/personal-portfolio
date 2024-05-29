@@ -7,13 +7,10 @@ import { useFormik } from "formik";
 import { Pedro } from "../_component/Pedro";
 import { GithubIcon } from "../assets/GithubIcon";
 import { InstaIcon } from "../assets/InstaIcon";
-import { useRef } from "react";
-import emailjs, { send } from "emailjs-com";
+import emailjs from "emailjs-com";
 import { toast } from "react-toastify";
 
 export const Contact = () => {
-  const form = useRef();
-
   const validationSchema = yup.object({
     name: yup.string().required("Enter a name"),
     email: yup.string().email("Should be an email").required("Enter an email"),
@@ -29,21 +26,19 @@ export const Contact = () => {
     validationSchema: validationSchema,
     onSubmit: async (values) => {
       try {
-        // emailjs.send(
-        //   "service_xjk9bw8",
-        //   "template_clzg0to",
-        //   {
-        //     name: values.name,
-        //     to_email: values.email,
-        //     message: values.message,
-        //   },
-        //   "nHPoh9lvgX_GC03kU"
-        // );
+        emailjs.send(
+          "service_xjk9bw8",
+          "template_clzg0to",
+          {
+            name: values.name,
+            email: values.email,
+            message: values.message,
+          },
+          "nHPoh9lvgX_GC03kU"
+        );
 
-        console.log("test");
         toast.success("Амжилттай илгээгдлээ");
       } catch (error) {
-        console.log(error);
         toast.error("Алдаа гарлаа");
       }
     },
@@ -52,11 +47,11 @@ export const Contact = () => {
   return (
     <div
       id="Contact"
-      className="w-full flex items-center py-10 bg-[#ffffff] dark:bg-[#121212]"
+      className="w-full flex items-center py-10 px-6 bg-[#ffffff] dark:bg-[#121212]"
     >
       <div className="w-full flex flex-col items-center gap-10">
-        <div className="hidden md:flex flex-col gap-5 p-10 w-[30%] m-auto bg-white rounded-lg border border-solid border-[#d6d8db]">
-          <h1 className="mb-2 text-center text-4xl font-bold text-[#3A7CF3]">
+        <div className="flex flex-col gap-5 md:p-10 p-5 md:w-[30%] m-auto bg-white rounded-lg border border-solid border-[#d6d8db]">
+          <h1 className="mb-2 text-center md:text-4xl text-3xl font-semibold md:font-bold text-[#3A7CF3]">
             Contact Me
           </h1>
 
@@ -100,7 +95,7 @@ export const Contact = () => {
             onClick={() => {
               formik.handleSubmit();
             }}
-            className={`btn pt-3 pb-10 bg-[#3A7CF3] text-white hover:bg-[#3a7cf3] ${
+            className={`btn pt-2 md:pt-3 pb-4 md:pb-10 bg-[#3A7CF3] text-white hover:bg-[#3a7cf3] ${
               !formik.isValid ? "cursor-not-allowed" : "cursor-pointer"
             }`}
             disabled={!formik.isValid}
