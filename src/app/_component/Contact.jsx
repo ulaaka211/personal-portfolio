@@ -24,7 +24,7 @@ export const Contact = () => {
       message: "",
     },
     validationSchema: validationSchema,
-    onSubmit: async (values, { resetForm }) => {
+    onSubmit: async (values) => {
       try {
         emailjs.send(
           "service_xjk9bw8",
