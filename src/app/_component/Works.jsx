@@ -85,7 +85,7 @@ export const Works = () => {
               >
                 <Image src="/blog.png" fill alt="work" />
               </div>
-              <div className="md:w-[50%] w-[80%] flex flex-col justify-between lg:text-left text-center gap-2">
+              <div className="md:w-[50%] w-[80%] flex flex-col justify-between lg:text-left text-center gap-6">
                 <h3
                   onClick={() => {
                     window.open(
