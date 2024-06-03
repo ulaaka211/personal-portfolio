@@ -7,7 +7,7 @@ import { SunIcon } from "../assets/SunIcon";
 export const ThemeSwitch = () => {
   const { theme, toggleTheme } = useTheme();
   return (
-    <button className="bg-white dark:bg-[#090a0b]" onClick={toggleTheme}>
+    <button className="bg-transparent" onClick={toggleTheme}>
       {theme === "light" ? <SunIcon /> : <MoonIcon />}
     </button>
   );
