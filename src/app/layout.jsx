@@ -17,6 +17,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <ThemeProvider>
           {children}
+
           <ToastContainer
             position="top-center"
             autoClose={3000}

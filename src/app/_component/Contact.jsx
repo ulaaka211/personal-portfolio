@@ -47,10 +47,10 @@ export const Contact = () => {
   return (
     <div
       id="Contact"
-      className="w-full flex items-center py-10 px-6 bg-[#ffffff] dark:bg-[#121212]"
+      className="w-full flex items-center py-10 bg-[#ffffff] dark:bg-[#121212]"
     >
-      <div className="w-full flex flex-col items-center gap-10">
-        <div className="flex flex-col gap-5 md:p-10 p-5 md:w-[30%] m-auto bg-white rounded-lg border border-solid border-[#d6d8db]">
+      <div className="w-full flex flex-col items-center gap-10 md:px-10 px-5">
+        <div className="flex flex-col gap-5 md:p-10 p-5 w-full max-w-[300px] sm:max-w-[350px] md:max-w-[450px] m-auto bg-white rounded-lg border border-solid border-[#d6d8db]">
           <h1 className="mb-2 text-center md:text-4xl text-3xl font-semibold md:font-bold text-[#3A7CF3]">
             Contact Me
           </h1>
