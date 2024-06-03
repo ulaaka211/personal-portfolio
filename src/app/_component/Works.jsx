@@ -99,8 +99,7 @@ export const Works = () => {
                 <p className="text-lg text-gray-500">
                   A blog web application is a platform that allows users to
                   create, publish, and manage their own blogs online. It
-                  provides an easy-to-use interface for writing, editing, and
-                  organizing blog posts.
+                  provides an easy-to-use.
                 </p>
                 <p className="text-xl text-gray font-medium text-black dark:text-white">
                   Typescript, ReactJS, NextJS, Vercel, NodeJS, MongoDB,
