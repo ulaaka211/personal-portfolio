@@ -10,7 +10,7 @@ export const Introduction = () => {
       id="Home"
       className="w-full lg:h-[100vh] md:py-20 py-10 flex flex-col justify-center items-center md:gap-20 gap-6 m-auto bg-[#F9F9F9] dark:bg-[#090a0b] lg:pb-[200px]"
     >
-      <div className="max-w-[1000px] w-full flex flex-col justify-between gap-20 px-5 md:px-10 ">
+      <div className="max-w-[1000px] w-full flex flex-col justify-between md:gap-20 gap-10 px-5 md:px-10 ">
         <div className="flex md:flex-row flex-col-reverse gap-10 items-center justify-between">
           <div className="flex md:flex-col flex-col md:gap-8 gap-4 md:items-start items-center text-black dark:text-white">
             <h1 className="text-5xl font-bold md:text-left text-center">
