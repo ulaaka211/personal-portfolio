@@ -46,7 +46,7 @@ export const Header = () => {
                 });
               }}
               key={index}
-              className="cursor-pointer"
+              className="cursor-pointer hover:text-[#3A7CF3]"
             >
               {item}
             </li>

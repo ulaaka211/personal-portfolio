@@ -1,7 +1,7 @@
 export const MoonIcon = () => {
   return (
     <svg
-      class="w-8 h-8 text-black dark:text-white"
+      class="w-8 h-8 text-black dark:text-white dark:hover:text-[#41A3DD]"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       width="24"
