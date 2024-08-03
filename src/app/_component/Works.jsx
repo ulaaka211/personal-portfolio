@@ -74,7 +74,7 @@ export const Works = () => {
               </div>
             </div>
 
-            <div className="w-full flex lg:flex-row flex-col md:gap-10 gap-5 items-center">
+            {/* <div className="w-full flex lg:flex-row flex-col md:gap-10 gap-5 items-center">
               <div
                 onClick={() => {
                   window.open(
@@ -107,7 +107,7 @@ export const Works = () => {
                   TailwindCSS
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
