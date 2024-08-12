@@ -8,14 +8,17 @@ export const Works = () => {
       id="Works"
       className="w-full flex items-center bg-[#F9F9F9] dark:bg-[#090a0b] md:py-24 py-10"
     >
-      <div className="flex max-w-[1000px] w-full m-auto md:px-10 px-5">
+      <div className="flex max-w-[1000px] w-full m-auto md:px-10 px-5 justify-center">
         <div className="flex flex-col gap-8">
-          <h3 className="text-main text-xl font-bold mb-3 m-auto text-black dark:text-white">
+          <h3 className=" text-main text-xl font-bold mb-3 m-auto text-black dark:text-white">
             RECENT WORKS
           </h3>
 
           <div className="flex flex-col md:gap-20 gap-10">
-            <div className="w-full flex lg:flex-row flex-col md:gap-10 gap-5 items-center ">
+            <h1 className="text-main text-5xl font-bold mb-3 m-auto text-black dark:text-white p-10">
+              Coming soon...
+            </h1>
+            {/* <div className="w-full flex lg:flex-row flex-col md:gap-10 gap-5 items-center ">
               <div
                 onClick={() => {
                   window.open("https://ecommerce-mo.vercel.app/");
@@ -72,7 +75,7 @@ export const Works = () => {
                   MongoDB, MUI, Nodemailer, JWT, Cloudinary
                 </p>
               </div>
-            </div>
+            </div> */}
 
             {/* <div className="w-full flex lg:flex-row flex-col md:gap-10 gap-5 items-center">
               <div
