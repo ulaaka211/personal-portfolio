@@ -70,7 +70,7 @@ export const Header = () => {
             href="/ulaaka cv.pdf"
             className="text-[12px] font-bold text-black dark:text-white"
           >
-            Downlaod CV
+            Download CV
           </a>
         </button>
         <div onClick={toggle}>
