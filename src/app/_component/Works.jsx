@@ -14,8 +14,38 @@ export const Works = () => {
             RECENT WORKS
           </h3>
 
+          <div className="w-full flex lg:flex-row flex-col md:gap-10 gap-5 items-center">
+            <div
+              onClick={() => {
+                window.open("https://food-delivery-ulaaka.vercel.app/");
+              }}
+              className="relative md:w-[50%] w-[75%] hover:scale-[98%] flex justify-start aspect-video overflow-scroll cursor-pointer rounded-md"
+            >
+              <Image src="/fooddeliver.png" fill alt="work" />
+            </div>
+            <div className="md:w-[50%] w-[80%] flex flex-col justify-between lg:text-left text-center gap-6">
+              <h3
+                onClick={() => {
+                  window.open("https://food-delivery-ulaaka.vercel.app/");
+                }}
+                className="text-2xl text-[#3A7CF3] font-semibold hover:text-main cursor-pointer"
+              >
+                Food Delivery Web Application
+              </h3>
+              <p className="text-lg text-gray-500">
+                Food delivery web apps offer convenience, variety, and real-time
+                tracking for users to order meals from restaurants and have them
+                delivered.
+              </p>
+              <p className="text-xl text-gray font-medium text-black dark:text-white">
+                Typescript, ReactJS, NextJS, Vercel, ExpressJS, NodeJS, MongoDB,
+                MUI, Nodemailer, JWT, Cloudinary
+              </p>
+            </div>
+          </div>
+
           <div className="flex flex-col md:gap-20 gap-10">
-            <div className="w-full flex lg:flex-row flex-col md:gap-10 gap-5 items-center ">
+            <div className="w-full flex lg:flex-row-reverse flex-col md:gap-10 gap-5 items-center ">
               <div
                 onClick={() => {
                   window.open("https://expense-tracker-mo.vercel.app/");
@@ -44,7 +74,7 @@ export const Works = () => {
                 </p>
               </div>
             </div>
-            <div className="w-full flex lg:flex-row-reverse flex-col md:gap-10 gap-5 items-center">
+            <div className="w-full flex lg:flex-row flex-col md:gap-10 gap-5 items-center">
               <div
                 onClick={() => {
                   window.open("https://metablog-mo.vercel.app/");
@@ -69,35 +99,6 @@ export const Works = () => {
                 </p> */}
                 <p className="text-xl text-gray font-medium text-black dark:text-white">
                   Javascript, ReactJS NextJS,Vercel, ExpressJS, NodeJS, Tailwind
-                </p>
-              </div>
-            </div>
-            <div className="w-full flex lg:flex-row flex-col md:gap-10 gap-5 items-center">
-              <div
-                onClick={() => {
-                  window.open("https://food-delivery-ulaaka.vercel.app/");
-                }}
-                className="relative md:w-[50%] w-[75%] hover:scale-[98%] flex justify-start aspect-video overflow-scroll cursor-pointer rounded-md"
-              >
-                <Image src="/fooddeliver.png" fill alt="work" />
-              </div>
-              <div className="md:w-[50%] w-[80%] flex flex-col justify-between lg:text-left text-center gap-6">
-                <h3
-                  onClick={() => {
-                    window.open("https://food-delivery-ulaaka.vercel.app/");
-                  }}
-                  className="text-2xl text-[#3A7CF3] font-semibold hover:text-main cursor-pointer"
-                >
-                  Food Delivery Web Application
-                </h3>
-                <p className="text-lg text-gray-500">
-                  Food delivery web apps offer convenience, variety, and
-                  real-time tracking for users to order meals from restaurants
-                  and have them delivered.
-                </p>
-                <p className="text-xl text-gray font-medium text-black dark:text-white">
-                  Typescript, ReactJS, NextJS, Vercel, ExpressJS, NodeJS,
-                  MongoDB, MUI, Nodemailer, JWT, Cloudinary
                 </p>
               </div>
             </div>
