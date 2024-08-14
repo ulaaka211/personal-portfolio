@@ -74,7 +74,7 @@ export const Works = () => {
           </div>
 
           <div className="flex flex-col md:gap-20 gap-10">
-            <div className="w-full flex lg:flex-row-reverse flex-col md:gap-10 gap-5 items-center ">
+            <div className="w-full flex lg:flex-row-row flex-col md:gap-10 gap-5 items-center ">
               <div
                 onClick={() => {
                   window.open("https://expense-tracker-mo.vercel.app/");
@@ -103,7 +103,7 @@ export const Works = () => {
                 </p>
               </div>
             </div>
-            <div className="w-full flex lg:flex-row flex-col md:gap-10 gap-5 items-center">
+            <div className="w-full flex lg:flex-row-reverse flex-col md:gap-10 gap-5 items-center">
               <div
                 onClick={() => {
                   window.open("https://metablog-mo.vercel.app/");
