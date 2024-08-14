@@ -15,42 +15,67 @@ export const Works = () => {
           </h3>
 
           <div className="flex flex-col md:gap-20 gap-10">
-            <h1 className="text-main text-5xl font-bold mb-3 m-auto text-black dark:text-white p-10">
-              Coming soon...
-            </h1>
-            {/* <div className="w-full flex lg:flex-row flex-col md:gap-10 gap-5 items-center ">
+            <div className="w-full flex lg:flex-row flex-col md:gap-10 gap-5 items-center ">
               <div
                 onClick={() => {
-                  window.open("https://ecommerce-mo.vercel.app/");
+                  window.open("https://expense-tracker-mo.vercel.app/");
                 }}
                 className="relative md:w-[50%] w-[75%] hover:scale-[98%] flex justify-start aspect-video overflow-scroll cursor-pointer rounded-md"
               >
-                <Image src="/ecommerce.png" fill alt="work" />
+                <Image src="/expenseTracker.png" fill alt="work" />
               </div>
               <div className="md:w-[50%] w-[80%] flex flex-col justify-between lg:text-left text-center gap-4">
                 <h3
                   onClick={() => {
-                    window.open("https://ecommerce-mo.vercel.app/");
+                    window.open("https://expense-tracker-mo.vercel.app/");
                   }}
                   className="text-2xl text-[#3A7CF3] font-semibold hover:text-main cursor-pointer"
                 >
-                  E-commerce Web Application
+                  Expense tracker Web Application
                 </h3>
-                <p className="text-lg text-gray-500">
+                {/* <p className="text-lg text-gray-500">
                   Discover curated selection of trendy fashion, stylish
                   accessories, gadgets, and home goods. Fast shipping, secure
                   payments, reliable customer service.
-                </p>
+                </p> */}
                 <p className="text-xl text-gray font-medium text-black dark:text-white">
-                  Typescript, ReactJS, NextJS, Vercel, ExpressJS, NodeJS,
-                  MongoDB, MUI, Nodemailer, Cloudinary
+                  Javascript,ReactJS, NextJS,Vercel, ExpressJS, NodeJS, MongoDB,
+                  Tailwind.
                 </p>
               </div>
             </div>
             <div className="w-full flex lg:flex-row-reverse flex-col md:gap-10 gap-5 items-center">
               <div
                 onClick={() => {
-                  window.open("https://food-delivery-mo.vercel.app/");
+                  window.open("https://metablog-mo.vercel.app/");
+                }}
+                className="relative md:w-[50%] w-[75%] hover:scale-[98%] flex justify-start aspect-video overflow-scroll cursor-pointer rounded-md"
+              >
+                <Image src="/metablog.png" fill alt="work" />
+              </div>
+              <div className="md:w-[50%] w-[80%] flex flex-col justify-between lg:text-left text-center gap-6">
+                <h3
+                  onClick={() => {
+                    window.open("https://metablog-mo.vercel.app/");
+                  }}
+                  className="text-2xl text-[#3A7CF3] font-semibold hover:text-main cursor-pointer"
+                >
+                  API MetaBlog
+                </h3>
+                {/* <p className="text-lg text-gray-500">
+                  Food delivery web apps offer convenience, variety, and
+                  real-time tracking for users to order meals from restaurants
+                  and have them delivered.
+                </p> */}
+                <p className="text-xl text-gray font-medium text-black dark:text-white">
+                  Javascript, ReactJS NextJS,Vercel, ExpressJS, NodeJS, Tailwind
+                </p>
+              </div>
+            </div>
+            <div className="w-full flex lg:flex-row flex-col md:gap-10 gap-5 items-center">
+              <div
+                onClick={() => {
+                  window.open("https://food-delivery-ulaaka.vercel.app/");
                 }}
                 className="relative md:w-[50%] w-[75%] hover:scale-[98%] flex justify-start aspect-video overflow-scroll cursor-pointer rounded-md"
               >
@@ -59,7 +84,7 @@ export const Works = () => {
               <div className="md:w-[50%] w-[80%] flex flex-col justify-between lg:text-left text-center gap-6">
                 <h3
                   onClick={() => {
-                    window.open("https://food-delivery-mo.vercel.app/");
+                    window.open("https://food-delivery-ulaaka.vercel.app/");
                   }}
                   className="text-2xl text-[#3A7CF3] font-semibold hover:text-main cursor-pointer"
                 >
@@ -75,7 +100,7 @@ export const Works = () => {
                   MongoDB, MUI, Nodemailer, JWT, Cloudinary
                 </p>
               </div>
-            </div> */}
+            </div>
 
             {/* <div className="w-full flex lg:flex-row flex-col md:gap-10 gap-5 items-center">
               <div
