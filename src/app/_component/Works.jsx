@@ -19,7 +19,7 @@ export const Works = () => {
               onClick={() => {
                 window.open("https://food-delivery-ulaaka.vercel.app/");
               }}
-              className="relative md:w-[50%] w-[75%] hover:scale-[98%] flex justify-start aspect-video overflow-scroll cursor-pointer rounded-md"
+              className="relative md:w-[60%] w-[75%] hover:scale-[98%] flex justify-start aspect-video overflow-hidden cursor-pointer rounded-md"
             >
               <Image src="/fooddeliver.png" fill alt="work" />
             </div>
@@ -48,7 +48,7 @@ export const Works = () => {
               onClick={() => {
                 window.open("https://ecommerce-mo.vercel.app/");
               }}
-              className="relative md:w-[50%] w-[75%] hover:scale-[98%] flex justify-start aspect-video overflow-scroll cursor-pointer rounded-md"
+              className="relative md:w-[50%] w-[75%] hover:scale-[98%] flex justify-start aspect-video overflow-hidden cursor-pointer rounded-md"
             >
               <Image src="/ecommerce.png" fill alt="work" />
             </div>
@@ -107,7 +107,7 @@ export const Works = () => {
               onClick={() => {
                 window.open("https://metablog-mo.vercel.app/");
               }}
-              className="relative md:w-[50%] w-[75%] hover:scale-[98%] flex justify-start aspect-video overflow-scroll cursor-pointer rounded-md"
+              className="relative md:w-[50%] w-[75%] hover:scale-[98%] flex justify-start aspect-video overflow-hidden cursor-pointer rounded-md"
             >
               <Image src="/metablog.png" fill alt="work" />
             </div>
