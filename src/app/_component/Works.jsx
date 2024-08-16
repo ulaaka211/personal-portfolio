@@ -43,7 +43,7 @@ export const Works = () => {
               </p>
             </div>
           </div>
-          {/* <div className="w-full flex lg:flex-row-reverse flex-col md:gap-10 gap-5 items-center ">
+          <div className="w-full flex lg:flex-row-reverse flex-col md:gap-10 gap-5 items-center ">
             <div
               onClick={() => {
                 window.open("https://ecommerce-mo.vercel.app/");
@@ -71,9 +71,9 @@ export const Works = () => {
                 MUI, Nodemailer, Cloudinary
               </p>
             </div>
-          </div> */}
+          </div>
 
-          <div className="w-full flex lg:flex-row-reverse flex-col md:gap-10 gap-5 items-center ">
+          {/* <div className="w-full flex lg:flex-row-reverse flex-col md:gap-10 gap-5 items-center ">
             <div
               onClick={() => {
                 window.open("https://expense-tracker-mo.vercel.app/");
@@ -91,17 +91,17 @@ export const Works = () => {
               >
                 Expense tracker Web Application
               </h3>
-              {/* <p className="text-lg text-gray-500">
-                  Discover curated selection of trendy fashion, stylish
-                  accessories, gadgets, and home goods. Fast shipping, secure
-                  payments, reliable customer service.
-                </p> */}
+              <p className="text-lg text-gray-500">
+                Discover curated selection of trendy fashion, stylish
+                accessories, gadgets, and home goods. Fast shipping, secure
+                payments, reliable customer service.
+              </p>
               <p className="text-xl text-gray font-medium text-black dark:text-white">
                 Javascript,ReactJS, NextJS,Vercel, ExpressJS, NodeJS, MongoDB,
                 Tailwind.
               </p>
             </div>
-          </div>
+          </div> */}
           <div className="w-full flex lg:flex-row flex-col md:gap-10 gap-5 items-center">
             <div
               onClick={() => {
