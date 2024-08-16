@@ -33,9 +33,9 @@ export const Works = () => {
                 Food Delivery Web Application
               </h3>
               <p className="text-lg text-gray-500">
-                Food delivery web apps offer convenience, variety, and real-time
-                tracking for users to order meals from restaurants and have them
-                delivered.
+                the easy-to-use food delivery platform for restaurant owners.
+                Add your menu, manage orders, and keep your customers satisfied
+                with just a few clicks.
               </p>
               <p className="text-xl text-gray font-medium text-black dark:text-white">
                 Typescript, ReactJS, NextJS, Vercel, ExpressJS, NodeJS, MongoDB,
