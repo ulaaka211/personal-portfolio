@@ -43,6 +43,7 @@ export const Works = () => {
               </p>
             </div>
           </div>
+
           <div className="w-full flex lg:flex-row-reverse flex-col md:gap-10 gap-5 items-center ">
             <div
               onClick={() => {
