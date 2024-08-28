@@ -67,7 +67,7 @@ export const Header = () => {
         <button className="flex md:hidden btn btn-ghost border border-black dark:border-white dark:text-white min-h-6 h-full">
           <a
             download
-            href="/ulaaka cv.pdf"
+            href="/cv.pdf"
             className="text-[12px] font-bold text-black dark:text-white"
           >
             Download CV
