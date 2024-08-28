@@ -56,7 +56,7 @@ export const Header = () => {
         <button className="btn btn-ghost border border-black dark:border-white">
           <a
             download
-            href="/ulaaka cv.pdf"
+            href="/cv.pdf"
             className="text-[16px] font-bold text-black dark:text-white"
           >
             Downlaod CV
