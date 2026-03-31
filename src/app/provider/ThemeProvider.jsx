@@ -5,7 +5,7 @@ import React, { useEffect, useState, createContext, useContext } from "react";
 const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
 
   const toggleTheme = () => {
     if (theme === "light") {
@@ -24,23 +24,21 @@ export const ThemeProvider = ({ children }) => {
 
     if (localTheme) {
       setTheme(localTheme);
-
       if (localTheme === "dark") {
         document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
       }
-    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    } else {
+      // Default to dark
       setTheme("dark");
       document.documentElement.classList.add("dark");
+      window.localStorage.setItem("theme", "dark");
     }
   }, []);
 
   return (
-    <ThemeContext.Provider
-      value={{
-        theme,
-        toggleTheme,
-      }}
-    >
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
       {children}
     </ThemeContext.Provider>
   );

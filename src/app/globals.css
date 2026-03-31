@@ -2,47 +2,110 @@
 @tailwind components;
 @tailwind utilities;
 
-@keyframes bounce {
+:root {
+  --accent: #6366f1;
+  --accent-cyan: #22d3ee;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, #6366f1, #22d3ee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glow effect */
+.glow {
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.3);
+}
+
+/* Card hover */
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2);
+}
+
+/* Skill badge hover */
+.skill-badge {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.skill-badge:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.25);
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
   to {
-    translate: 0 5px;
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
+.fade-in-up {
+  animation: fadeInUp 0.7s ease both;
+}
+
+/* Floating avatar shape */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+.float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Rotating gradient border */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.spinner {
+  animation: spin 8s linear infinite;
+}
+
+/* Avatar morphing */
+.avatar-morph {
+  animation: morph 8s ease-in-out infinite;
+}
+
+@keyframes morph {
+  0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  25%       { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+  50%       { border-radius: 50% 60% 30% 60% / 30% 60% 70% 40%; }
+  75%       { border-radius: 70% 30% 60% 40% / 60% 40% 60% 40%; }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0d0d0d; }
+::-webkit-scrollbar-thumb { background: #6366f1; border-radius: 3px; }
+
+/* Pedro bounce (kept for compatibility) */
+@keyframes bounce {
+  to { translate: 0 5px; }
+}
 .pedro {
   scale: 1.1;
   animation: bounce 200ms linear infinite alternate;
 }
-
-@keyframes spin {
-  to {
-    rotate: -1turn;
-  }
-}
-
 .wrapper {
   animation: spin 10s linear infinite;
-}
-
-.avatar {
-  animation: shape 8s linear infinite;
-}
-
-@keyframes shape {
-  from {
-    border-radius: 33% 67% 55% 45% / 58% 60% 40% 42%;
-  }
-  25% {
-    border-radius: 32% 50% 50% / 30% 40% 60% 70%;
-  }
-
-  50% {
-    border-radius: 61% 39% 58% 42% / 37% 66% 34% 63%;
-  }
-
-  75% {
-    border-radius: 42% 55% 45% / 58% 60% 40% 42%;
-  }
-  to {
-    border-radius: 33% 67% 55% 45% / 58% 60% 40% 42%;
-  }
 }

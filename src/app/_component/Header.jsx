@@ -1,9 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Bars } from "../assets/Bars";
 import { useScroll } from "../hooks/UseScroll";
-import { BurgerMenu } from "../_component/BurgerMenu";
 import { ThemeSwitch } from "./ThemeSwitch";
 
 export const navbar = ["Home", "About", "Works", "Contact"];
@@ -12,72 +10,96 @@ export const Header = () => {
   const [open, setOpen] = useState(false);
   const scrolled = useScroll(0);
 
-  const toggle = () => {
-    setOpen((prev) => !prev);
+  const scrollTo = (id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    setOpen(false);
   };
 
   return (
-    <header
-      className={
-        scrolled
-          ? "h-full w-full flex items-center justify-between py-2 md:py-4 md:px-10 pl-4 pr-2 bg-[#ffffffd9] dark:bg-[#090a0bd9] sticky top-0 left-0 z-10 shadow-md"
-          : "h-full w-full flex items-center justify-between py-2 md:py-4 md:px-10 pl-4 pr-2 bg-white dark:bg-[#090a0b] relative top-0 left-0 z-10"
-      }
-    >
-      <div
-        className="flex items-center justify-center cursor-pointer"
-        onClick={() => {
-          document.getElementById("Home").scrollIntoView({
-            behavior: "smooth",
-          });
-        }}
+    <>
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          scrolled
+            ? "py-3 bg-[#0a0a0a]/90 backdrop-blur-md border-b border-white/10 shadow-lg"
+            : "py-5 bg-transparent"
+        }`}
       >
-        <h1 className="md:text-[30px] text-[26px] md:font-[700] font-[600] flex justify-center items-center text-black dark:text-white">
-          &#60; S &#47;&#62;
-        </h1>
-      </div>
-      <div className="hidden md:flex items-center justify-center gap-[24px]">
-        <ul className="flex items-center justify-center gap-[24px] text-[16px] font-bold text-black dark:text-white">
-          {navbar.map((item, index) => (
-            <li
-              onClick={() => {
-                document.getElementById(`${item}`).scrollIntoView({
-                  behavior: "smooth",
-                });
-              }}
-              key={index}
-              className="cursor-pointer hover:text-[#3A7CF3]"
+        <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
+          {/* Logo */}
+          <button
+            onClick={() => scrollTo("Home")}
+            className="text-2xl font-bold gradient-text hover:opacity-80 transition-opacity"
+          >
+            &lt;S /&gt;
+          </button>
+
+          {/* Desktop Nav */}
+          <nav className="hidden md:flex items-center gap-8">
+            <ul className="flex items-center gap-8">
+              {navbar.map((item) => (
+                <li key={item}>
+                  <button
+                    onClick={() => scrollTo(item)}
+                    className="text-sm font-medium text-gray-300 hover:text-white transition-colors relative group"
+                  >
+                    {item}
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-cyan-400 group-hover:w-full transition-all duration-300" />
+                  </button>
+                </li>
+              ))}
+            </ul>
+            <ThemeSwitch />
+            <a
+              download
+              href="/cv.pdf"
+              className="px-4 py-2 text-sm font-semibold rounded-lg border border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white transition-all duration-300"
             >
-              {item}
+              Resume
+            </a>
+          </nav>
+
+          {/* Mobile */}
+          <div className="flex md:hidden items-center gap-3">
+            <ThemeSwitch />
+            <button
+              onClick={() => setOpen((p) => !p)}
+              className="flex flex-col gap-1.5 p-2"
+              aria-label="Menu"
+            >
+              <span className={`block h-0.5 w-6 bg-white transition-all duration-300 ${open ? "rotate-45 translate-y-2" : ""}`} />
+              <span className={`block h-0.5 w-6 bg-white transition-all duration-300 ${open ? "opacity-0" : ""}`} />
+              <span className={`block h-0.5 w-6 bg-white transition-all duration-300 ${open ? "-rotate-45 -translate-y-2" : ""}`} />
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {/* Mobile Menu */}
+      <div
+        className={`fixed inset-0 z-40 bg-[#0a0a0a]/95 backdrop-blur-lg flex flex-col items-center justify-center gap-10 transition-all duration-300 md:hidden ${
+          open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
+      >
+        <ul className="flex flex-col items-center gap-8">
+          {navbar.map((item) => (
+            <li key={item}>
+              <button
+                onClick={() => scrollTo(item)}
+                className="text-3xl font-bold text-white hover:text-indigo-400 transition-colors"
+              >
+                {item}
+              </button>
             </li>
           ))}
         </ul>
-        <ThemeSwitch />
-        <button className="btn btn-ghost border border-black dark:border-white">
-          <a
-            download
-            href="/cv.pdf"
-            className="text-[16px] font-bold text-black dark:text-white"
-          >
-            Downlaod CV
-          </a>
-        </button>
+        <a
+          download
+          href="/cv.pdf"
+          className="px-6 py-3 rounded-lg border border-indigo-500 text-indigo-400 font-semibold hover:bg-indigo-500 hover:text-white transition-all"
+        >
+          Resume
+        </a>
       </div>
-      <div className="flex md:hidden p-[6px] items-center gap-2">
-        <button className="flex md:hidden btn btn-ghost border border-black dark:border-white dark:text-white min-h-6 h-full">
-          <a
-            download
-            href="/cv.pdf"
-            className="text-[12px] font-bold text-black dark:text-white"
-          >
-            Download CV
-          </a>
-        </button>
-        <div onClick={toggle}>
-          <Bars />
-        </div>
-      </div>
-      {open && <BurgerMenu setOpen={setOpen} toggle={toggle} />}
-    </header>
+    </>
   );
 };

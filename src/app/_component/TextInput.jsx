@@ -15,23 +15,19 @@ export const TextInput = (props) => {
 
   return (
     <div className="flex flex-col gap-1 w-full" data-testid="Custom-Input">
-      <h1 className="md:text-lg text-base font-medium md:font-semibold text-black">
-        {label}
-      </h1>
-      <label
+      <label className="text-sm font-medium text-gray-300">{label}</label>
+      <div
         data-testid="error"
         className={cx(
-          "flex px-[13px] items-center gap-2 bg-[#ECEDF0] rounded-[4px] border border-[#d6d8db] hover:border-black",
+          "flex px-4 items-center gap-2 bg-white/5 rounded-lg border transition-colors",
           {
-            "border-red-700 hover:border-red-700 focus-within:ring-1 focus-within:ring-red-700 ":
-              error,
-            "focus-within:ring-1 focus-within:ring-[#3873cb] focus-within:border-[#3873cb] focus-within:hover:border-[#3873cb]":
-              !error,
+            "border-red-500/60 focus-within:ring-1 focus-within:ring-red-500": error,
+            "border-white/10 hover:border-white/20 focus-within:ring-1 focus-within:ring-indigo-500 focus-within:border-indigo-500": !error,
           }
         )}
       >
         <input
-          className="py-[13px] w-full text-black bg-[#ECEDF0] rounded-sm focus:outline-none md:text-base text-sm"
+          className="py-3 w-full text-white bg-transparent rounded-sm focus:outline-none text-sm placeholder:text-gray-600"
           type={type}
           name={name}
           onChange={onChange}
@@ -39,8 +35,8 @@ export const TextInput = (props) => {
           value={value}
           placeholder={placeholder}
         />
-      </label>
-      <p className="text-red-700 text-xs">{helperText}</p>
+      </div>
+      {helperText && <p className="text-red-400 text-xs mt-0.5">{helperText}</p>}
     </div>
   );
 };
