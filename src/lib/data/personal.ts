@@ -1,29 +1,56 @@
 export const PERSONAL = {
   name: "Saikhanbayar",
-  title: "Systems & Performance Engineer",
+  title: "Software Engineer",
   subtitle: "Frontend Architecture · Backend Pipelines · Fintech/NBFI",
-  company: "Invescore",
-  email: "saikhanbayar@example.com",
+  company: "Invescore NBFI",
+  email: "uulaaka73@gmail.com",
   github: "https://github.com/ulaaka211",
   linkedin: "https://linkedin.com/in/saikhanbayar",
-  tagline: "Building modular UIs and robust data pipelines in the credit-risk domain.",
+  tagline:
+    "Building modular UIs and robust data pipelines in the credit-risk domain.",
 } as const;
 
 export const METRICS = [
   { label: "Years Experience", value: "2+", unit: "yrs", color: "cyan" },
-  { label: "React Components Refactored", value: "80+", unit: "components", color: "purple" },
-  { label: "Lines per File (Target)", value: "<150", unit: "LOC", color: "green" },
-  { label: "DB Query Optimisation", value: "~60%", unit: "faster", color: "amber" },
+  {
+    label: "React Components Refactored",
+    value: "80+",
+    unit: "components",
+    color: "purple",
+  },
+  {
+    label: "Lines per File (Target)",
+    value: "<150",
+    unit: "LOC",
+    color: "green",
+  },
+  {
+    label: "DB Query Optimisation",
+    value: "~60%",
+    unit: "faster",
+    color: "amber",
+  },
 ] as const;
 
 export const SKILLS = {
   frontend: [
-    "Next.js 14", "React 18", "TypeScript", "Zustand",
-    "React Query", "Tailwind CSS", "Framer Motion", "Storybook",
+    "Next.js 14",
+    "React 18",
+    "TypeScript",
+    "Zustand",
+    "React Query",
+    "Tailwind CSS",
+    "Framer Motion",
+    "Storybook",
   ],
   backend: [
-    "Node.js", "PostgreSQL", "REST APIs", "ACID Transactions",
-    "Query Optimisation", "Cron Pipelines", "Redis",
+    "Node.js",
+    "PostgreSQL",
+    "REST APIs",
+    "ACID Transactions",
+    "Query Optimisation",
+    "Cron Pipelines",
+    "Redis",
   ],
   tools: ["Git", "Docker", "Vercel", "ESLint", "Jest", "Cypress", "Prometheus"],
 } as const;
