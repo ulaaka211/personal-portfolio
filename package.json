@@ -9,8 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@types/node": "^25.5.0",
-    "@types/react-dom": "^19.2.3",
     "autoprefixer": "^10.4.19",
     "classnames": "^2.5.1",
     "emailjs-com": "^3.2.0",
@@ -21,13 +19,15 @@
     "react-dom": "^18",
     "react-tilt": "^1.0.2",
     "react-toastify": "^10.0.5",
-    "typescript": "^6.0.2",
     "yup": "^1.4.0"
   },
   "devDependencies": {
-    "@types/react": "^18.3.2",
+    "@types/node": "^20",
+    "@types/react": "18.3.2",
+    "@types/react-dom": "18.3.1",
     "daisyui": "^4.11.1",
     "postcss": "^8.4.38",
-    "tailwindcss": "^3.4.3"
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.4.5"
   }
 }
