@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { MetricCard } from "@/components/ui/MetricCard";
 import { NeonBadge } from "@/components/ui/NeonBadge";
 import { TerminalText } from "@/components/ui/TerminalText";
+import { ProfileImage } from "@/components/ui/ProfileImage";
 import { PERSONAL, METRICS, SKILLS } from "@/lib/data/personal";
 
 const TERMINAL_LINES = [
@@ -52,6 +53,10 @@ export default function Hero() {
           </motion.div>
 
           <motion.div custom={1} initial="hidden" animate="visible" variants={fadeUp}>
+            <ProfileImage src="/profile.jpg" alt={PERSONAL.name} size={140} />
+          </motion.div>
+
+          <motion.div custom={2} initial="hidden" animate="visible" variants={fadeUp}>
             <h1 className="text-4xl md:text-5xl font-bold text-slate-100 leading-tight">
               {PERSONAL.name}
             </h1>
@@ -61,7 +66,7 @@ export default function Hero() {
           </motion.div>
 
           <motion.p
-            custom={2}
+            custom={3}
             initial="hidden"
             animate="visible"
             variants={fadeUp}
@@ -75,7 +80,7 @@ export default function Hero() {
 
           {/* Skill badges */}
           <motion.div
-            custom={3}
+            custom={4}
             initial="hidden"
             animate="visible"
             variants={fadeUp}
@@ -91,7 +96,7 @@ export default function Hero() {
 
           {/* CTAs */}
           <motion.div
-            custom={4}
+            custom={5}
             initial="hidden"
             animate="visible"
             variants={fadeUp}

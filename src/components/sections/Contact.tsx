@@ -5,7 +5,7 @@ import { TextInput } from "@/components/ui/TextInput";
 import { TextArea } from "@/components/ui/TextArea";
 import * as yup from "yup";
 import { useFormik } from "formik";
-import emailjs from "@emailjs/browser";
+import { send as sendEmail } from "@emailjs/browser";
 import { toast } from "react-toastify";
 
 const validationSchema = yup.object({
@@ -20,7 +20,7 @@ const Contact: FC = () => {
     validationSchema,
     onSubmit: async (values, { resetForm }) => {
       try {
-        await emailjs.send(
+        await sendEmail(
           "service_xjk9bw8",
           "template_clzg0to",
           { name: values.name, email: values.email, message: values.message },
