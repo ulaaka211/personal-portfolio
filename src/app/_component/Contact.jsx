@@ -4,9 +4,6 @@ import { TextInput } from "../_component/TextInput";
 import { TextArea } from "../_component/TextArea";
 import * as yup from "yup";
 import { useFormik } from "formik";
-import { Pedro } from "../_component/Pedro";
-import { GithubIcon } from "../assets/GithubIcon";
-import { InstaIcon } from "../assets/InstaIcon";
 import emailjs from "emailjs-com";
 import { toast } from "react-toastify";
 
@@ -47,15 +44,16 @@ export const Contact = () => {
   return (
     <div
       id="Contact"
-      className="w-full flex items-center py-10 bg-[#ffffff] dark:bg-[#121212]"
+      className="w-full flex items-center py-20 bg-carbon-800 bg-grid"
     >
       <div className="w-full flex flex-col items-center gap-10 md:px-10 px-5">
-        <div className="flex flex-col gap-5 md:p-10 p-5 w-full max-w-[300px] sm:max-w-[350px] md:max-w-[450px] m-auto bg-white rounded-lg border border-solid border-[#d6d8db]">
-          <h1 className="mb-2 text-center md:text-4xl text-3xl font-semibold md:font-bold text-[#3A7CF3]">
-            Contact Me
-          </h1>
+        <div className="flex flex-col gap-5 md:p-10 p-6 w-full max-w-[400px] m-auto glass-card rounded-xl border border-[rgba(0,212,255,0.15)]">
+          <div>
+            <span className="font-mono text-[#00d4ff] text-xs tracking-widest uppercase">Get In Touch</span>
+            <h2 className="mt-2 text-2xl md:text-3xl font-bold text-slate-100">Contact Me</h2>
+          </div>
 
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-3">
             <TextInput
               name="name"
               label="Name"
@@ -92,25 +90,25 @@ export const Contact = () => {
 
           <button
             type="submit"
-            onClick={() => {
-              formik.handleSubmit();
-            }}
-            className={`btn pt-2 md:pt-3 pb-4 md:pb-10 bg-[#3A7CF3] text-white hover:bg-[#3a7cf3] ${
-              !formik.isValid ? "cursor-not-allowed" : "cursor-pointer"
+            onClick={() => { formik.handleSubmit(); }}
+            className={`w-full py-3 rounded border border-[rgba(0,212,255,0.4)] text-[#00d4ff] font-mono text-sm hover:bg-[rgba(0,212,255,0.1)] transition-colors ${
+              !formik.isValid ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
             }`}
             disabled={!formik.isValid}
           >
-            <h2 className="text-lg text-semibold">Send</h2>
+            Send Message
           </button>
         </div>
-        <Pedro />
-        <div className="flex flex-col items-center gap-8">
-          <p className="text-[20px] text-[400] text-black dark:text-white md:text-left text-center">
-            You may also find me on these platforms!
-          </p>
+
+        <div className="flex flex-col items-center gap-4">
+          <p className="font-mono text-sm text-slate-400">// find me on these platforms</p>
           <div className="flex gap-5">
-            <GithubIcon />
-            <InstaIcon />
+            <a href="https://github.com/ulaaka211" target="_blank" rel="noopener noreferrer"
+              className="text-slate-500 hover:text-[#00d4ff] transition-colors">
+              <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.57v-2c-3.34.72-4.04-1.6-4.04-1.6-.54-1.38-1.33-1.74-1.33-1.74-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.48.99.1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.25 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.68.82.57C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+            </a>
           </div>
         </div>
       </div>

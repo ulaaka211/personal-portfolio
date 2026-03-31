@@ -1,8 +1,9 @@
 export const Footer = () => {
   return (
-    <footer className="md:w-full flex items-center justify-center px-8 py-8 bg-[#2D2E32]">
-      <p className="text-lg text-white text-center">
-        © 2024 | S Saikhanbayar. All rights reserved.
+    <footer className="w-full flex items-center justify-center px-8 py-6 bg-carbon-950 border-t border-[rgba(0,212,255,0.08)]">
+      <p className="font-mono text-xs text-slate-600 text-center">
+        © 2024 Saikhanbayar — Systems &amp; Performance Engineer
+        <span className="ml-2 text-[#00d4ff]">{'</>'}</span>
       </p>
     </footer>
   );

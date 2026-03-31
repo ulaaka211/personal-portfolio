@@ -1,17 +1,23 @@
-import { AboutMe } from "./_component/AboutMe";
-import { Introduction } from "./_component/Introduction";
-import { Works } from "./_component/Works";
+import Hero from "@/components/sections/Hero";
+import ExperienceTimeline from "@/components/sections/ExperienceTimeline";
+import ProjectSpotlight from "@/components/sections/ProjectSpotlight";
+import RefactoringCaseStudy from "@/components/sections/RefactoringCaseStudy";
+import ArchitectureVisualizer from "@/components/sections/ArchitectureVisualizer";
+import RustProgress from "@/components/sections/RustProgress";
 import { Contact } from "./_component/Contact";
 import { Header } from "./_component/Header";
 import { Footer } from "./_component/Footer";
 
 export default function Home() {
   return (
-    <main className="bg-[#fff] dark:bg-[#090a0b]">
+    <main className="bg-carbon-900 min-h-screen">
       <Header />
-      <Introduction />
-      <AboutMe />
-      <Works />
+      <Hero />
+      <ExperienceTimeline />
+      <ProjectSpotlight />
+      <ArchitectureVisualizer />
+      <RefactoringCaseStudy />
+      <RustProgress />
       <Contact />
       <Footer />
     </main>

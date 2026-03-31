@@ -15,24 +15,23 @@ export const TextArea = (props) => {
 
   return (
     <div className="flex flex-col gap-1 w-full" data-testid="Custom-Input">
-      <h1 className="md:text-lg text-base font-medium md:font-semibold text-black">
+      <h1 className="text-sm font-mono text-slate-400">
         {label}
       </h1>
       <label
         data-testid="error"
         className={cx(
-          "flex px-[13px] items-center gap-2 bg-[#ECEDF0] rounded-[4px] border border-[#d6d8db] hover:border-black",
+          "flex px-3 items-start gap-2 bg-[rgba(255,255,255,0.04)] rounded border border-[rgba(0,212,255,0.2)] hover:border-[rgba(0,212,255,0.4)] transition-colors",
           {
-            "border-red-700 hover:border-red-700 focus-within:ring-1 focus-within:ring-red-700 ":
+            "border-red-700 hover:border-red-700 focus-within:ring-1 focus-within:ring-red-700":
               error,
-            "focus-within:ring-1 focus-within:ring-[#3873cb] focus-within:border-[#3873cb] focus-within:hover:border-[#3873cb]":
+            "focus-within:ring-1 focus-within:ring-[rgba(0,212,255,0.4)] focus-within:border-[rgba(0,212,255,0.4)]":
               !error,
           }
         )}
       >
         <textarea
-          className="md:min-h-[200px] min-h-[100px] py-[13px] w-full text-black bg-[#ECEDF0] rounded-sm focus:outline-none md:text-base text-sm"
-          type={type}
+          className="min-h-[120px] py-3 w-full text-slate-200 bg-transparent rounded-sm focus:outline-none text-sm font-mono placeholder-slate-600 resize-none"
           name={name}
           onChange={onChange}
           onBlur={onBlur}
@@ -40,7 +39,8 @@ export const TextArea = (props) => {
           placeholder={placeholder}
         />
       </label>
-      <p className="text-red-700 text-xs">{helperText}</p>
+      <p className="text-red-500 text-xs font-mono">{helperText}</p>
     </div>
   );
 };
+
