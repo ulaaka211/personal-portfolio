@@ -9,25 +9,24 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "autoprefixer": "^10.4.19",
-    "classnames": "^2.5.1",
-    "emailjs-com": "^3.2.0",
-    "formik": "^2.4.5",
-    "framer-motion": "^12.38.0",
+    "@emailjs/browser": "4.4.1",
+    "autoprefixer": "10.4.27",
+    "classnames": "2.5.1",
+    "formik": "2.4.9",
+    "framer-motion": "12.38.0",
     "next": "15.5.14",
-    "react": "^18",
-    "react-dom": "^18",
-    "react-tilt": "^1.0.2",
-    "react-toastify": "^10.0.5",
-    "yup": "^1.4.0"
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "react-toastify": "11.0.5",
+    "yup": "1.7.1"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "18.3.2",
-    "@types/react-dom": "18.3.1",
-    "daisyui": "^4.11.1",
-    "postcss": "^8.4.38",
-    "tailwindcss": "^3.4.3",
-    "typescript": "^5.4.5"
+    "@types/node": "22.15.0",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "daisyui": "4.12.24",
+    "postcss": "8.5.8",
+    "tailwindcss": "3.4.19",
+    "typescript": "5.8.3"
   }
 }

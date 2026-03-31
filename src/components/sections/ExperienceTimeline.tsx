@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { NeonBadge } from "@/components/ui/NeonBadge";
-import { FRONTEND_TIMELINE, BACKEND_TIMELINE } from "@/lib/data";
+import { FRONTEND_TIMELINE, BACKEND_TIMELINE } from "@/lib/data/timeline";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },

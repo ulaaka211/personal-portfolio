@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ARCH_NODES } from "@/lib/data";
+import { ARCH_NODES } from "@/lib/data/projects";
 
 interface ArchNode {
   id: string;

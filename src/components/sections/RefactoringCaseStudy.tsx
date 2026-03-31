@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { REFACTOR_EXAMPLE } from "@/lib/data";
+import { REFACTOR_EXAMPLE } from "@/lib/data/projects";
 
 export default function RefactoringCaseStudy() {
   const [view, setView] = useState<"legacy" | "refactored">("legacy");

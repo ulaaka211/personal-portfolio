@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { NeonBadge } from "@/components/ui/NeonBadge";
-import { POST_LOAN_SEGMENTS } from "@/lib/data";
+import { POST_LOAN_SEGMENTS } from "@/lib/data/projects";
 
 const SCHEMA_FIELDS = [
   { name: "loan_id", type: "UUID", key: "PK" },

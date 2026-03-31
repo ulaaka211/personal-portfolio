@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { MetricCard } from "@/components/ui/MetricCard";
 import { NeonBadge } from "@/components/ui/NeonBadge";
 import { TerminalText } from "@/components/ui/TerminalText";
-import { PERSONAL, METRICS, SKILLS } from "@/lib/data";
+import { PERSONAL, METRICS, SKILLS } from "@/lib/data/personal";
 
 const TERMINAL_LINES = [
   "cd ~/engineering-portfolio",

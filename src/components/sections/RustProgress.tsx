@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { RUST_TOPICS } from "@/lib/data";
+import { RUST_TOPICS } from "@/lib/data/personal";
 
 export default function RustProgress() {
   return (

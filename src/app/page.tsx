@@ -4,9 +4,9 @@ import ProjectSpotlight from "@/components/sections/ProjectSpotlight";
 import RefactoringCaseStudy from "@/components/sections/RefactoringCaseStudy";
 import ArchitectureVisualizer from "@/components/sections/ArchitectureVisualizer";
 import RustProgress from "@/components/sections/RustProgress";
-import { Contact } from "./_component/Contact";
-import { Header } from "./_component/Header";
-import { Footer } from "./_component/Footer";
+import Contact from "@/components/sections/Contact";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 
 export default function Home() {
   return (
