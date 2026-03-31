@@ -30,7 +30,7 @@ export default function Hero() {
   return (
     <section
       id="Home"
-      className="relative w-full min-h-screen flex flex-col justify-center bg-carbon-900 bg-grid overflow-hidden"
+      className="relative w-full min-h-[calc(100vh-3.5rem)] flex flex-col justify-center bg-carbon-900 bg-grid overflow-hidden"
     >
       {/* Ambient glow orbs */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[rgba(0,212,255,0.04)] rounded-full blur-3xl pointer-events-none" />
@@ -58,7 +58,7 @@ export default function Hero() {
             animate="visible"
             variants={fadeUp}
           >
-            <ProfileImage src="/profile1.png" alt={PERSONAL.name} size={140} />
+            <ProfileImage src="/profile.png" alt={PERSONAL.name} size={140} />
           </motion.div>
 
           <motion.div
