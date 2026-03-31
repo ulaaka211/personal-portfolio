@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="dark">
-      <body className="bg-[#0a0e1a] font-sans">
+      <body className="bg-[#0a0e1a] font-sans overflow-x-hidden">
         <ThemeProvider>
           {children}
           <ToastContainer position="top-center" autoClose={3000} hideProgressBar />

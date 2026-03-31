@@ -84,7 +84,7 @@ export default function ProjectSpotlight() {
             </div>
 
             {/* SQL snippet */}
-            <div className="mt-5 code-surface rounded-lg p-4 text-xs">
+            <div className="mt-5 code-surface rounded-lg p-3 sm:p-4 text-xs overflow-x-auto">
               <div className="text-slate-500 mb-2">-- Segmentation query (simplified)</div>
               <div className="text-[#a78bfa]">SELECT</div>
               <div className="pl-4 text-slate-300">
@@ -105,34 +105,34 @@ export default function ProjectSpotlight() {
           </motion.div>
 
           {/* DB Schema + Stats */}
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-6 min-w-0">
             {/* Schema */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="glass-card rounded-xl border border-[rgba(124,58,237,0.2)] p-6"
+              className="glass-card rounded-xl border border-[rgba(124,58,237,0.2)] p-4 sm:p-6"
             >
               <h3 className="font-mono text-slate-100 text-sm font-semibold mb-4 flex items-center gap-2">
                 <span className="w-1.5 h-4 rounded-sm bg-[#a78bfa]" />
                 Schema: post_loan_actions
               </h3>
-              <div className="code-surface rounded-lg overflow-hidden">
+              <div className="code-surface rounded-lg overflow-x-auto">
                 <table className="w-full text-xs font-mono">
                   <thead>
                     <tr className="border-b border-[rgba(255,255,255,0.06)]">
-                      <th className="text-left px-3 py-2 text-slate-500 font-normal">column</th>
-                      <th className="text-left px-3 py-2 text-slate-500 font-normal">type</th>
-                      <th className="text-left px-3 py-2 text-slate-500 font-normal">key</th>
+                      <th className="text-left px-2 sm:px-3 py-2 text-slate-500 font-normal">column</th>
+                      <th className="text-left px-2 sm:px-3 py-2 text-slate-500 font-normal">type</th>
+                      <th className="text-left px-2 sm:px-3 py-2 text-slate-500 font-normal">key</th>
                     </tr>
                   </thead>
                   <tbody>
                     {SCHEMA_FIELDS.map((f) => (
                       <tr key={f.name} className="border-b border-[rgba(255,255,255,0.03)] hover:bg-[rgba(0,212,255,0.03)] transition-colors">
-                        <td className="px-3 py-1.5 text-[#00d4ff]">{f.name}</td>
-                        <td className="px-3 py-1.5 text-[#a78bfa]">{f.type}</td>
-                        <td className="px-3 py-1.5 text-[#10b981] text-[10px]">{f.key}</td>
+                        <td className="px-2 sm:px-3 py-1.5 text-[#00d4ff]">{f.name}</td>
+                        <td className="px-2 sm:px-3 py-1.5 text-[#a78bfa]">{f.type}</td>
+                        <td className="px-2 sm:px-3 py-1.5 text-[#10b981] text-[10px]">{f.key}</td>
                       </tr>
                     ))}
                   </tbody>

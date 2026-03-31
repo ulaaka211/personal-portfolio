@@ -36,9 +36,9 @@ export default function Hero() {
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[rgba(0,212,255,0.04)] rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-[rgba(124,58,237,0.05)] rounded-full blur-3xl pointer-events-none" />
 
-      <div className="relative max-w-6xl mx-auto w-full px-5 md:px-10 py-20 grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative max-w-6xl mx-auto w-full px-5 md:px-10 py-20 grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
         {/* Left — Text content */}
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6 min-w-0">
           <motion.div
             custom={0}
             initial="hidden"
@@ -158,7 +158,7 @@ export default function Hero() {
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
-          className="flex flex-col gap-5"
+          className="flex flex-col gap-5 min-w-0"
         >
           <TerminalText lines={TERMINAL_LINES} typingSpeed={30} />
 

@@ -37,7 +37,7 @@ export default function RefactoringCaseStudy() {
           <div className="glass-card rounded-full border border-[rgba(0,212,255,0.2)] p-1 flex gap-1">
             <button
               onClick={() => setView("legacy")}
-              className={`px-5 py-2 rounded-full font-mono text-sm transition-all duration-300 ${
+              className={`px-3 sm:px-5 py-2 rounded-full font-mono text-xs sm:text-sm transition-all duration-300 ${
                 view === "legacy"
                   ? "bg-[rgba(239,68,68,0.2)] text-[#f87171] border border-[rgba(239,68,68,0.4)]"
                   : "text-slate-500 hover:text-slate-400"
@@ -47,7 +47,7 @@ export default function RefactoringCaseStudy() {
             </button>
             <button
               onClick={() => setView("refactored")}
-              className={`px-5 py-2 rounded-full font-mono text-sm transition-all duration-300 ${
+              className={`px-3 sm:px-5 py-2 rounded-full font-mono text-xs sm:text-sm transition-all duration-300 ${
                 view === "refactored"
                   ? "bg-[rgba(16,185,129,0.15)] text-[#34d399] border border-[rgba(16,185,129,0.4)]"
                   : "text-slate-500 hover:text-slate-400"
@@ -69,16 +69,16 @@ export default function RefactoringCaseStudy() {
           {/* Code window chrome */}
           <div className="glass-card rounded-xl border border-[rgba(0,212,255,0.15)] overflow-hidden">
             {/* Title bar */}
-            <div className="flex items-center justify-between px-4 py-3 border-b border-[rgba(255,255,255,0.06)] bg-[rgba(255,255,255,0.02)]">
-              <div className="flex items-center gap-1.5">
+            <div className="flex items-center justify-between gap-2 px-3 sm:px-4 py-3 border-b border-[rgba(255,255,255,0.06)] bg-[rgba(255,255,255,0.02)] flex-wrap sm:flex-nowrap">
+              <div className="flex items-center gap-1.5 flex-shrink-0">
                 <span className="w-3 h-3 rounded-full bg-[#ef4444]" />
                 <span className="w-3 h-3 rounded-full bg-[#f59e0b]" />
                 <span className="w-3 h-3 rounded-full bg-[#10b981]" />
               </div>
-              <div className="font-mono text-xs text-slate-500">
+              <div className="font-mono text-xs text-slate-500 truncate hidden sm:block">
                 {view === "legacy" ? "MonolithicLoanPage.jsx — 847 lines" : "Modular Architecture — <150 LOC/file"}
               </div>
-              <div className="flex items-center gap-1.5">
+              <div className="flex items-center gap-1.5 flex-shrink-0">
                 <span
                   className={`w-2 h-2 rounded-full ${
                     view === "legacy" ? "bg-[#ef4444]" : "bg-[#10b981]"
@@ -103,7 +103,7 @@ export default function RefactoringCaseStudy() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -6 }}
                 transition={{ duration: 0.25 }}
-                className="overflow-x-auto p-5 text-xs leading-relaxed font-mono text-slate-300 bg-[#050709] max-h-[480px]"
+                className="overflow-x-auto p-3 sm:p-5 text-xs leading-relaxed font-mono text-slate-300 bg-[#050709] max-h-[480px]"
               >
                 <code>{view === "legacy" ? REFACTOR_EXAMPLE.legacy : REFACTOR_EXAMPLE.refactored}</code>
               </motion.pre>
@@ -112,7 +112,7 @@ export default function RefactoringCaseStudy() {
         </motion.div>
 
         {/* Comparison metrics */}
-        <div className="grid md:grid-cols-4 gap-4 mt-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mt-8">
           {[
             { label: "File Size", legacy: "847 LOC", after: "<150 LOC", good: true },
             { label: "State Declarations", legacy: "30+", after: "2–4 per hook", good: true },

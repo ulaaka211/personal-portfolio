@@ -49,7 +49,7 @@ export const TerminalText: FC<TerminalTextProps> = ({
         <span className="w-3 h-3 rounded-full bg-[#10b981]" />
         <span className="ml-2 text-slate-500 text-xs font-mono">terminal</span>
       </div>
-      <div className="font-mono space-y-1 min-h-[120px]">
+      <div className="font-mono space-y-1 min-h-[120px] overflow-x-auto">
         {displayed.map((line, i) => (
           <div key={i} className="text-slate-300 text-xs leading-relaxed">
             <span className="text-[#00d4ff] select-none">$ </span>

@@ -14,7 +14,7 @@ export default function RustProgress() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="flex flex-col gap-5"
+            className="flex flex-col gap-5 min-w-0"
           >
             <div>
               <span className="font-mono text-[#f97316] text-xs tracking-widest uppercase">
@@ -51,7 +51,7 @@ export default function RustProgress() {
             </div>
 
             {/* Rust code snippet */}
-            <div className="code-surface rounded-lg p-4 text-xs">
+            <div className="code-surface rounded-lg p-3 sm:p-4 text-xs overflow-x-auto">
               <div className="text-slate-500 mb-2 font-mono">// Current exercise — ownership</div>
               <div className="font-mono space-y-0.5">
                 <div><span className="text-[#a78bfa]">fn</span> <span className="text-[#00d4ff]">process_loan</span><span className="text-slate-300">(</span></div>

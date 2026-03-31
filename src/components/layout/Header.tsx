@@ -15,10 +15,10 @@ export const Header: FC = () => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
   const baseClasses =
-    "h-full w-full flex items-center justify-between py-2 md:py-4 md:px-10 pl-4 pr-2 sticky top-0 left-0 z-10";
+    "w-full flex items-center justify-between py-2 md:py-4 md:px-10 pl-4 pr-2 sticky top-0 left-0 z-50";
   const scrolledClasses = scrolled
     ? "bg-[rgba(10,14,26,0.92)] backdrop-blur-md border-b border-[rgba(0,212,255,0.1)]"
-    : "bg-transparent relative";
+    : "bg-transparent";
 
   return (
     <header className={`${baseClasses} ${scrolledClasses}`}>

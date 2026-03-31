@@ -27,7 +27,7 @@ const NodeBox: React.FC<NodeBoxProps> = ({ node }) => (
     style={{ left: `${node.x}%`, top: `${node.y}%` }}
   >
     <div
-      className="px-3 py-2 rounded-lg border text-center min-w-[100px] max-w-[120px] bg-carbon-900"
+      className="px-2 sm:px-3 py-2 rounded-lg border text-center min-w-[80px] sm:min-w-[100px] max-w-[110px] sm:max-w-[120px] bg-carbon-900"
       style={{
         borderColor: `${node.color}50`,
         boxShadow: `0 0 12px ${node.color}20`,
@@ -84,7 +84,7 @@ export default function ArchitectureVisualizer() {
           className="glass-card rounded-xl border border-[rgba(0,212,255,0.15)] p-4 md:p-8 overflow-x-auto"
         >
           {/* SVG for edges */}
-          <div className="relative w-full" style={{ minHeight: "300px" }}>
+          <div className="relative w-full min-h-[280px] sm:min-h-[300px]" style={{ minWidth: "320px" }}>
             <svg
               className="absolute inset-0 w-full h-full pointer-events-none"
               viewBox="0 0 100 100"

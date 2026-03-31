@@ -10,7 +10,7 @@ import { Footer } from "@/components/layout/Footer";
 
 export default function Home() {
   return (
-    <main className="bg-carbon-900 min-h-screen">
+    <main className="bg-carbon-900 min-h-screen overflow-x-hidden">
       <Header />
       <Hero />
       <ExperienceTimeline />
