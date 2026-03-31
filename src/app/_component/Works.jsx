@@ -2,137 +2,160 @@
 
 import Image from "next/image";
 
+const projects = [
+  {
+    title: "Food Delivery Web Application",
+    description:
+      "A full-featured food delivery platform for restaurant owners. Add your menu, manage orders, and keep customers satisfied with just a few clicks.",
+    image: "/fooddeliver.png",
+    tags: ["TypeScript", "React", "Next.js", "Node.js", "MongoDB", "MUI"],
+    link: "https://food-delivery-ulaaka.vercel.app/",
+    color: "from-orange-500/20 to-red-500/20",
+  },
+  {
+    title: "E-commerce Web Application",
+    description:
+      "Discover a curated selection of trendy fashion, stylish accessories, gadgets, and home goods. Fast shipping, secure payments, reliable service.",
+    image: "/ecommerce.png",
+    tags: ["TypeScript", "React", "Next.js", "Node.js", "MongoDB", "Cloudinary"],
+    link: "https://ecommerce-mo.vercel.app/",
+    color: "from-blue-500/20 to-cyan-500/20",
+  },
+  {
+    title: "MetaBlog Platform",
+    description:
+      "A modern blog platform powered by an API. Clean reading experience with full content management capabilities for writers and editors.",
+    image: "/metablog.png",
+    tags: ["JavaScript", "React", "Next.js", "Node.js", "Tailwind CSS"],
+    link: "https://metablog-mo.vercel.app/",
+    color: "from-purple-500/20 to-pink-500/20",
+  },
+];
+
 export const Works = () => {
   return (
-    <div
+    <section
       id="Works"
-      className="w-full flex items-center bg-[#F9F9F9] dark:bg-[#090a0b] md:py-24 py-10"
+      className="w-full py-24 md:py-32 bg-gray-50 dark:bg-dark-card relative overflow-hidden"
     >
-      <div className="flex max-w-[1000px] w-full m-auto md:px-10 px-5 justify-center">
-        <div className="flex flex-col gap-8">
-          <h3 className=" text-main text-xl font-bold mb-3 m-auto text-black dark:text-white">
-            RECENT WORKS
-          </h3>
+      {/* Background */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
 
-          <div className="w-full flex lg:flex-row flex-col md:gap-10 gap-5 items-center">
-            <div
-              onClick={() => {
-                window.open("https://food-delivery-ulaaka.vercel.app/");
-              }}
-              className="relative md:w-[60%] w-[75%] hover:scale-[98%] flex justify-start aspect-video overflow-hidden cursor-pointer rounded-md"
-            >
-              <Image src="/fooddeliver.png" fill alt="work" />
-            </div>
-            <div className="md:w-[50%] w-[80%] flex flex-col justify-between lg:text-left text-center gap-6">
-              <h3
-                onClick={() => {
-                  window.open("https://food-delivery-ulaaka.vercel.app/");
-                }}
-                className="text-2xl text-[#3A7CF3] font-semibold hover:text-main cursor-pointer"
-              >
-                Food Delivery Web Application
-              </h3>
-              <p className="text-lg text-gray-500">
-                the easy-to-use food delivery platform for restaurant owners.
-                Add your menu, manage orders, and keep your customers satisfied
-                with just a few clicks.
-              </p>
-              <p className="text-xl text-gray font-medium text-black dark:text-white">
-                Typescript, ReactJS, NextJS, Vercel, ExpressJS, NodeJS, MongoDB,
-                MUI, Nodemailer, JWT, Cloudinary
-              </p>
-            </div>
-          </div>
+      <div className="relative max-w-6xl mx-auto px-6 md:px-10">
+        {/* Header */}
+        <div className="flex flex-col items-center gap-4 mb-16">
+          <span className="section-tag">Portfolio</span>
+          <h2 className="text-3xl md:text-5xl font-black text-gray-900 dark:text-white text-center">
+            Featured <span className="gradient-text">Projects</span>
+          </h2>
+          <p className="text-base md:text-lg text-gray-500 dark:text-gray-400 max-w-xl text-center">
+            A selection of projects I&apos;ve built — from concept to
+            deployment.
+          </p>
+        </div>
 
-          <div className="w-full flex lg:flex-row-reverse flex-col md:gap-10 gap-5 items-center ">
+        {/* Projects */}
+        <div className="flex flex-col gap-12 md:gap-20">
+          {projects.map((project, i) => (
             <div
-              onClick={() => {
-                window.open("https://ecommerce-mo.vercel.app/");
-              }}
-              className="relative md:w-[50%] w-[75%] hover:scale-[98%] flex justify-start aspect-video overflow-hidden cursor-pointer rounded-md"
+              key={i}
+              className={`project-card flex flex-col ${i % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"} gap-8 lg:gap-12 items-center`}
             >
-              <Image src="/ecommerce.png" fill alt="work" />
-            </div>
-            <div className="md:w-[50%] w-[80%] flex flex-col justify-between lg:text-left text-center gap-4">
-              <h3
-                onClick={() => {
-                  window.open("https://ecommerce-mo.vercel.app/");
-                }}
-                className="text-2xl text-[#3A7CF3] font-semibold hover:text-main cursor-pointer"
-              >
-                E-commerce Web Application
-              </h3>
-              <p className="text-lg text-gray-500">
-                Discover curated selection of trendy fashion, stylish
-                accessories, gadgets, and home goods. Fast shipping, secure
-                payments, reliable customer service.
-              </p>
-              <p className="text-xl text-gray font-medium text-black dark:text-white">
-                Typescript, ReactJS, NextJS, Vercel, ExpressJS, NodeJS, MongoDB,
-                MUI, Nodemailer, Cloudinary
-              </p>
-            </div>
-          </div>
+              {/* Image */}
+              <div className="lg:w-1/2 w-full">
+                <div
+                  className={`relative rounded-2xl overflow-hidden p-1 bg-gradient-to-br ${project.color} cursor-pointer group`}
+                  onClick={() => window.open(project.link)}
+                >
+                  <div className="relative aspect-video rounded-xl overflow-hidden">
+                    <Image
+                      src={project.image}
+                      fill
+                      alt={project.title}
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    {/* Overlay on hover */}
+                    <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                      <div className="flex items-center gap-2 text-white font-semibold">
+                        <svg
+                          className="w-5 h-5"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                          />
+                        </svg>
+                        View Live
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-          {/* <div className="w-full flex lg:flex-row-reverse flex-col md:gap-10 gap-5 items-center ">
-            <div
-              onClick={() => {
-                window.open("https://expense-tracker-mo.vercel.app/");
-              }}
-              className="relative md:w-[50%] w-[75%] hover:scale-[98%] flex justify-start aspect-video overflow-scroll cursor-pointer rounded-md"
-            >
-              <Image src="/expenseTracker.png" fill alt="work" />
+              {/* Content */}
+              <div className="lg:w-1/2 w-full flex flex-col gap-5 text-center lg:text-left">
+                <div>
+                  <p className="text-sm font-semibold text-primary mb-2">
+                    Project {String(i + 1).padStart(2, "0")}
+                  </p>
+                  <h3
+                    className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white cursor-pointer hover:text-primary dark:hover:text-primary transition-colors"
+                    onClick={() => window.open(project.link)}
+                  >
+                    {project.title}
+                  </h3>
+                </div>
+
+                <div className="p-5 rounded-2xl bg-white dark:bg-dark border border-gray-100 dark:border-dark-border">
+                  <p className="text-gray-500 dark:text-gray-400 leading-relaxed">
+                    {project.description}
+                  </p>
+                </div>
+
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
+                  {project.tags.map((tag, j) => (
+                    <span
+                      key={j}
+                      className="px-3 py-1 text-xs font-semibold rounded-lg bg-primary/10 text-primary dark:text-indigo-300 border border-primary/20"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Link */}
+                <div className="flex justify-center lg:justify-start">
+                  <button
+                    onClick={() => window.open(project.link)}
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-secondary transition-colors group"
+                  >
+                    View Live Project
+                    <svg
+                      className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M17 8l4 4m0 0l-4 4m4-4H3"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
             </div>
-            <div className="md:w-[50%] w-[80%] flex flex-col justify-between lg:text-left text-center gap-4">
-              <h3
-                onClick={() => {
-                  window.open("https://expense-tracker-mo.vercel.app/");
-                }}
-                className="text-2xl text-[#3A7CF3] font-semibold hover:text-main cursor-pointer"
-              >
-                Expense tracker Web Application
-              </h3>
-              <p className="text-lg text-gray-500">
-                Discover curated selection of trendy fashion, stylish
-                accessories, gadgets, and home goods. Fast shipping, secure
-                payments, reliable customer service.
-              </p>
-              <p className="text-xl text-gray font-medium text-black dark:text-white">
-                Javascript,ReactJS, NextJS,Vercel, ExpressJS, NodeJS, MongoDB,
-                Tailwind.
-              </p>
-            </div>
-          </div> */}
-          <div className="w-full flex lg:flex-row flex-col md:gap-10 gap-5 items-center">
-            <div
-              onClick={() => {
-                window.open("https://metablog-mo.vercel.app/");
-              }}
-              className="relative md:w-[50%] w-[75%] hover:scale-[98%] flex justify-start aspect-video overflow-hidden cursor-pointer rounded-md"
-            >
-              <Image src="/metablog.png" fill alt="work" />
-            </div>
-            <div className="md:w-[50%] w-[80%] flex flex-col justify-between lg:text-left text-center gap-6">
-              <h3
-                onClick={() => {
-                  window.open("https://metablog-mo.vercel.app/");
-                }}
-                className="text-2xl text-[#3A7CF3] font-semibold hover:text-main cursor-pointer"
-              >
-                API MetaBlog
-              </h3>
-              {/* <p className="text-lg text-gray-500">
-                  Food delivery web apps offer convenience, variety, and
-                  real-time tracking for users to order meals from restaurants
-                  and have them delivered.
-                </p> */}
-              <p className="text-xl text-gray font-medium text-black dark:text-white">
-                Javascript, ReactJS NextJS,Vercel, ExpressJS, NodeJS, Tailwind
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
