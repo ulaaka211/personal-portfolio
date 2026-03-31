@@ -46,3 +46,94 @@
     border-radius: 33% 67% 55% 45% / 58% 60% 40% 42%;
   }
 }
+
+/* ── Engineering Portfolio Utilities ── */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(0, 212, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 255, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.neon-text-cyan {
+  color: #00d4ff;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.6), 0 0 20px rgba(0, 212, 255, 0.3);
+}
+
+.neon-text-green {
+  color: #10b981;
+  text-shadow: 0 0 10px rgba(16, 185, 129, 0.6), 0 0 20px rgba(16, 185, 129, 0.3);
+}
+
+.neon-border-cyan {
+  border-color: rgba(0, 212, 255, 0.4);
+  box-shadow: 0 0 8px rgba(0, 212, 255, 0.15);
+}
+
+.neon-border-purple {
+  border-color: rgba(124, 58, 237, 0.4);
+  box-shadow: 0 0 8px rgba(124, 58, 237, 0.15);
+}
+
+.glass-card {
+  background: rgba(15, 22, 41, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 212, 255, 0.15);
+}
+
+.code-surface {
+  background: rgba(5, 7, 9, 0.9);
+  border: 1px solid rgba(0, 212, 255, 0.1);
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+.terminal-cursor::after {
+  content: '▌';
+  animation: blink 1s step-end infinite;
+  color: #00d4ff;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.gradient-text-cyan {
+  background: linear-gradient(135deg, #00d4ff 0%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-green {
+  background: linear-gradient(135deg, #10b981 0%, #00d4ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.timeline-line {
+  background: linear-gradient(to bottom, transparent, rgba(0, 212, 255, 0.6), transparent);
+}
+
+.refactor-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #00d4ff;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.8);
+}
+
+.refactor-slider::-webkit-slider-runnable-track {
+  background: rgba(0, 212, 255, 0.2);
+  border-radius: 8px;
+  height: 4px;
+}
+
+.rust-progress-bar {
+  background: linear-gradient(90deg, #f97316, #ef4444);
+  box-shadow: 0 0 8px rgba(249, 115, 22, 0.5);
+}
+
