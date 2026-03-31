@@ -6,7 +6,6 @@ import { TextArea } from "@/components/ui/TextArea";
 import { PERSONAL } from "@/lib/data/personal";
 import * as yup from "yup";
 import { useFormik } from "formik";
-import { send as sendEmail } from "@emailjs/browser";
 import { toast } from "react-toastify";
 
 const validationSchema = yup.object({
@@ -24,14 +23,23 @@ const Contact: FC = () => {
     onSubmit: async (values, { resetForm }) => {
       setSending(true);
       try {
-        await sendEmail(
-          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ?? "",
-          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ?? "",
-          { name: values.name, email: values.email, message: values.message },
-          process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY ?? "",
-        );
-        resetForm();
-        toast.success("Message sent successfully!");
+        const res = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY ?? "",
+            name: values.name,
+            email: values.email,
+            message: values.message,
+          }),
+        });
+        const data = await res.json();
+        if (data.success) {
+          resetForm();
+          toast.success("Message sent successfully!");
+        } else {
+          toast.error("Failed to send message");
+        }
       } catch {
         toast.error("Failed to send message");
       } finally {
